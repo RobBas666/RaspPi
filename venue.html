@@ -5,15 +5,49 @@ function Login(){
   alert(" You are logged in");
 }
 </script>
+<div align="center">
+  <font size="16">
+    Venue
+  </font>
+</div>
 </head>
 <body style="background-color:#1EB49F;">
 
-<form action="/action_page.php">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br>
-  <input type="button" onclick="Login()" value="Submit">
+<form action="Submit"  onsubmit="return Submission()">
+  Twitter Handle: @ <input type="text" id="fname" size="20">
+  <div>
+   Comment <input type="text" id="Comment" size="140">
+  </div>
+  Place your vote for the best presenter in the venue
+   <div style="padding:20px;">
+   <font size="14";>
+   <table>
+    <tr>
+        <td>Presenter 1</td>
+        <td>Presenter 2</td>
+        <td>Presenter 3</td>
+    </tr>
+	<tr>
+	 <td> <form action="">
+       <input type="radio" id="P1" value=""> </form> </td>
+	   <td> <form action="">
+       <input type="radio" id="P2" value=""> </form> </td>
+	   <td> <form action="">
+       <input type="radio" id="P3" value=""> </form> </td>
+	</tr> 
+	</tr>
+   </table>
+   </font>
+   </div>
+  <div>  
+  <input type="submit" onclick="Login()" value="Submit">
+  </div>
 </form>
+<script>
+ function Submission() {
+    
+ }
+</script>
 </body>
 </html>
 
-<!––wordpress website:https://bbdredirect.wordpress.com––>
