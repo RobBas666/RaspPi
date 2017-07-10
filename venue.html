@@ -13,41 +13,31 @@ function Login(){
 </head>
 <body style="background-color:#1EB49F;">
 
-<form action="Submit"  onsubmit="return Submission()">
-  Twitter Handle: @ <input type="text" id="fname" size="20">
+<form action="Submit"  onsubmit="Login()">
+  Twitter Handle: @ <input type="text" id="Hand" size="20">
   <div>
-   Comment <input type="text" id="Comment" size="140">
-  </div>
   Place your vote for the best presenter in the venue
-   <div style="padding:20px;">
-   <font size="14";>
-   <table>
-    <tr>
-        <td>Presenter 1</td>
-        <td>Presenter 2</td>
-        <td>Presenter 3</td>
-    </tr>
-	<tr>
-	 <td> <form action="">
-       <input type="radio" id="P1" value=""> </form> </td>
-	   <td> <form action="">
-       <input type="radio" id="P2" value=""> </form> </td>
-	   <td> <form action="">
-       <input type="radio" id="P3" value=""> </form> </td>
-	</tr> 
-	</tr>
-   </table>
-   </font>
+  </div>
+   <div>
+    <form action="">
+	<div>
+     <input type="radio" name="vote" id = "r1" value="1"> Presenter 1<br>
+	  Comment <input type="text" id="Comment1" size="50">
+	 </div>
+	 <div>
+     <input type="radio" name="vote" id = "r2" value="2"> Presenter 2<br>
+	 Comment <input type="text" id="Comment2" size="50">
+	 </div>
+	 <div>
+     <input type="radio" name="vote" id = "r3" value="3"> Presenter 3<br>
+	 Comment <input type="text" id="Comment3" size="50">
+	 </div>
+   </form>
    </div>
   <div>  
   <input type="submit" onclick="Login()" value="Submit">
   </div>
 </form>
-<script>
- function Submission() {
-    
- }
-</script>
 </body>
 </html>
 
