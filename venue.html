@@ -2,9 +2,20 @@
 <head>
 <script src='./jquery-3.2.1.min.js'></script>
 <script type="text/javascript">
-function Login(){
-  alert(" You are logged in");
-}
+ function post(){
+   document.body.style.backgroundColor = "red";
+   alert(" Your comments have been posted");
+ }
+</script>
+<script>
+ $(document).ready(function(){
+    $("#vote").click(function(){
+        $("#r1").hide();
+		$("#r2").hide();
+		$("#r3").hide();
+		$("#vote").hide();
+    });
+   });
 </script>
 <div align="center">
   <font size="16">
@@ -14,7 +25,7 @@ function Login(){
 </head>
 <body style="background-color:#1EB49F;">
 
-<form action="Submit"  onsubmit="Login()">
+
   Twitter Handle: @ <input type="text" id="Hand" size="20">
   <div>
   Place your vote for the best presenter in the venue
@@ -36,9 +47,9 @@ function Login(){
    </form>
    </div>
   <div>  
-  <input type="submit" onclick="Login()" value="Submit">
+  <input type="button" id = "post" onclick="post()" value="Post Comment">
   </div>
-</form>
+ <button id="vote">Vote</button>
 </body>
 </html>
 
