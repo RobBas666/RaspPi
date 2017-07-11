@@ -2,9 +2,16 @@
  <head>
   <script src='./jquery-3.2.1.min.js'></script>
   <script>
+  var name, topic,venue,start,handle;
    function Enter(){
+    name= document.getElementById("name").value;
+	handle = document.getElementById("handle").value;
+	topic = document.getElementById("topic").value;
+	venue = document.getElementById("venue").value;
+	start = document.getElementById("start").value;
     alert("information has been set");
    }
+   
   </script>
   <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
   <title> BBD Escape Set Information </title>
@@ -30,15 +37,18 @@
     Name:  <input type="text" id="fname" size="20">
 	</div>
 	<div>
+    Handle: @  <input type="text" id="handle" size="20">
+	</div>
+	<div>
 	Topic:  <input type="text" id="topic" size="20">
 	</div>
 	<div>
 	Venue: <input type="text" id="venue" size="20">
 	</div>
 	<div>
-	Start: <input type="text" id="start" size="20">
+	Start Time: <input type="text" id="start" size="20">
 	</div>
-	<input type="submit" onclick="Enter()" value="Enter">
+	<input type="button" onclick="Enter()" value="Set Information">
   </form>
  </body>
 </html>
