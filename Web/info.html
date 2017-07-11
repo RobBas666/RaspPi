@@ -2,19 +2,35 @@
  <head>
   <script src='./jquery-3.2.1.min.js'></script>
   <script>
-  var name, topic,venue,start,handle;
+  var name, topic,venue,start,handle,end;
    function Enter(){
     name= document.getElementById("name").value;
 	handle = document.getElementById("handle").value;
 	topic = document.getElementById("topic").value;
 	venue = document.getElementById("venue").value;
 	start = document.getElementById("start").value;
+	end = document.getElementById("end").value;
     alert("information has been set");
    }
    
   </script>
   <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
   <title> BBD Escape Set Information </title>
+  <style>
+   body {margin:0;}
+    .topnav {
+     overflow: hidden;
+    background-color: #333;
+  }
+  </style>
+
+<div class="topnav" id="topnav">
+  <img src="BBD-SoftwareDevelopment-White.png" style="width:220px;height:100px;">
+   <font size="16" color="white">
+   Set Info
+  </font>
+  <img src="Escape-White.png" style="width:220px;height:100px;" img align= "right">
+</div>
   <style>
    body {
         background-image: url("1.jpg");
@@ -24,11 +40,6 @@
          background-size: cover;
  } 
  </style>
-  <div align="center">
-  <font size="16" color="white">
-   Set Info
-  </font>
-  </div>
  </head>
  <body>
   <font color = "white">
@@ -47,6 +58,9 @@
 	</div>
 	<div>
 	Start Time: <input type="text" id="start" size="20">
+	</div>
+	<div>
+	 End Time: <input type="text" id="end" size="20">
 	</div>
 	<input type="button" onclick="Enter()" value="Set Information">
   </form>
