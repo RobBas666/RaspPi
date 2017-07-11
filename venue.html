@@ -2,19 +2,6 @@
 <head>
 <script src='./jquery-3.2.1.min.js'></script>
 <script type="text/javascript">
-    var macAddress = "";
-    var ipAddress = "";
-    var computerName = "";
-    var wmi = GetObject("winmgmts:{impersonationLevel=impersonate}");
-    e = new Enumerator(wmi.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled = True"));
-    for(; !e.atEnd(); e.moveNext()) {
-        var s = e.item(); 
-        macAddress = s.MACAddress;
-        ipAddress = s.IPAddress(0);
-        computerName = s.DNSHostName;
-    } 
-</script>
-<script type="text/javascript">
  function post(){
    var com1,com2,com3,handle,i=0;;
    handle = document.getElementById("Hand").value;
@@ -36,7 +23,6 @@
     document.getElementById("Comment3").value = "Posted"
 	//Post to twitter
    }
-   document.body.style.backgroundColor = "red";
   
   if (i>0){
    alert(" Your comments have been posted");
@@ -73,15 +59,15 @@
     <form action="">
 	<div>
      <input type="radio" name="vote" id = "r1" value="1"> Presenter 1<br>
-	  Comment <input type="text" id="Comment1" size="50">
+	 &#160 &#160 Comment <input type="text" id="Comment1" size="50">
 	 </div>
 	 <div>
      <input type="radio" name="vote" id = "r2" value="2"> Presenter 2<br>
-	 Comment <input type="text" id="Comment2" size="50">
+	  &#160 &#160 Comment <input type="text" id="Comment2" size="50">
 	 </div>
 	 <div>
      <input type="radio" name="vote" id = "r3" value="3"> Presenter 3<br>
-	 Comment <input type="text" id="Comment3" size="50">
+	  &#160 &#160 Comment <input type="text" id="Comment3" size="50">
 	 </div>
    </form>
    </div>
