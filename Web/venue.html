@@ -7,27 +7,31 @@
    var com1,com2,com3,handle,i=0;;
    handle = "@"+ document.getElementById("Hand").value;
    com1 = document.getElementById("Comment1").value;
-   if (com1 != ""){
+   if (com1 != ""&& com1.length<141){
     i++
-    document.getElementById("Comment1").value = "Posted"
+    document.getElementById("Comment1").value = " This comment has been posted";
 	//Post to twitter
    }
    com2 = document.getElementById("Comment2").value;
-   if (com2 != ""){
+   if (com2 != "" && com2.length<141){
     i++
-    document.getElementById("Comment2").value = "Posted"
+    document.getElementById("Comment2").value = " This comment has been posted";
 	//Post to twitter
    }
    com3 = document.getElementById("Comment3").value;
-   if (com3 != ""){
+   if (com3 != "" && com3.length<141){
     i++
-    document.getElementById("Comment3").value = "Posted"
+    document.getElementById("Comment3").value = " This comment has been posted";
 	//Post to twitter
    }
   
   if (i>0){
    alert(" Your comments have been posted");
    }
+  if (com1.length >140||com2.length >140||com2.length >140){
+	     alert("Some comments werent posted due to their length");
+         alert("Please ensure that comments are less than 140 characters long");
+       }
  }
  
  function vote(){
