@@ -2,10 +2,49 @@
 <head>
 <script src='./jquery-3.2.1.min.js'></script>
 <script type="text/javascript">
+    var macAddress = "";
+    var ipAddress = "";
+    var computerName = "";
+    var wmi = GetObject("winmgmts:{impersonationLevel=impersonate}");
+    e = new Enumerator(wmi.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled = True"));
+    for(; !e.atEnd(); e.moveNext()) {
+        var s = e.item(); 
+        macAddress = s.MACAddress;
+        ipAddress = s.IPAddress(0);
+        computerName = s.DNSHostName;
+    } 
+</script>
+<script type="text/javascript">
  function post(){
+   var com1,com2,com3,handle,i=0;;
+   handle = document.getElementById("Hand").value;
+   com1 = document.getElementById("Comment1").value;
+   if (com1 != ""){
+    i++
+    document.getElementById("Comment1").value = "Posted"
+	//Post to twitter
+   }
+   com2 = document.getElementById("Comment2").value;
+   if (com2 != ""){
+    i++
+    document.getElementById("Comment2").value = "Posted"
+	//Post to twitter
+   }
+   com3 = document.getElementById("Comment3").value;
+   if (com3 != ""){
+    i++
+    document.getElementById("Comment3").value = "Posted"
+	//Post to twitter
+   }
    document.body.style.backgroundColor = "red";
+  
+  if (i>0){
    alert(" Your comments have been posted");
+   }
  }
+ 
+ /* check mac address function code
+ }*/
 </script>
 <script>
  $(document).ready(function(){
@@ -50,6 +89,9 @@
   <input type="button" id = "post" onclick="post()" value="Post Comment">
   </div>
  <button id="vote">Vote</button>
+ <script type="text/javascript">
+    //function to check mac address call
+  </script>
 </body>
 </html>
 
