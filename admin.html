@@ -3,30 +3,28 @@
   <script src='./jquery-3.2.1.min.js'></script>
   <script>
    function Enter(){
-    alert(" You are logged in");
+    var pass = document.getElementById("pass").value;
+	if (pass == "1234"){
+     alert(" redirecting you to the information page ");
+	 window.location.href ='info.html';
+	 } else {
+	            alert("Wrong Password");
+				document.getElementById("pass").value ="";
+	       }
    }
   </script>
   <div align="center">
   <font size="16">
-   Set Info
+   Admin Login
   </font>
   </div>
  </head>
  <body style="background-color:#1EB49F;">
   <form action="" >
    <div>
-    Name:  <input type="text" id="fname" size="20">
+    Password:  <input type="text" id="pass" size="20">
 	</div>
-	<div>
-	Topic:  <input type="text" id="topic" size="20">
-	</div>
-	<div>
-	Venue: <input type="text" id="venue" size="20">
-	</div>
-	<div>
-	Start: <input type="text" id="start" size="20">
-	</div>
-	<input type="submit" onclick="Enter()" value="Enter">
+	<input type="button" onclick="Enter()" value="Enter">
   </form>
  </body>
 </html>
