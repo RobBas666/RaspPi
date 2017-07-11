@@ -2,9 +2,10 @@
 <head>
 <script src='./jquery-3.2.1.min.js'></script>
 <script type="text/javascript">
+ var v = 0;
  function post(){
    var com1,com2,com3,handle,i=0;;
-   handle = document.getElementById("Hand").value;
+   handle = "@"+ document.getElementById("Hand").value;
    com1 = document.getElementById("Comment1").value;
    if (com1 != ""){
     i++
@@ -29,18 +30,36 @@
    }
  }
  
- /* check mac address function code
- }*/
-</script>
-<script>
- $(document).ready(function(){
+ function vote(){
+  if(v!=0){
+    alert("thank you for voting");
+   } else { alert("Please select a presenter");}
+ }
+ 
+  $(document).ready(function(){
     $("#vote").click(function(){
+	  if(v!=0){
         $("#r1").hide();
 		$("#r2").hide();
 		$("#r3").hide();
 		$("#vote").hide();
+	 }
     });
+	$("#r1").click(function(){
+	  v = 1;
+	});
+	$("#r2").click(function(){
+	  v = 2;
+	});
+	$("#r3").click(function(){
+	  v = 3;
+	});
    });
+ /* check mac address function code
+ }*/
+</script>
+<script>
+
 </script>
 <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
 <title> BBD Escape Voting </title>
@@ -84,7 +103,9 @@
   <div>  
   <input type="button" id = "post" onclick="post()" value="Post Comment">
   </div>
-  <br>
+  <p></p>
+  <input type="button" id = "vote" onclick="vote()" value="Vote">
+  <p></p>
   <a class="twitter-timeline" href="https://twitter.com/RasbPi3">Tweets by RasbPi3</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  <script type="text/javascript">
     //function to check mac address call
