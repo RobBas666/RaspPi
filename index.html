@@ -2,17 +2,35 @@
 <head>
 <script type="text/javascript">
 function Login(){
+ if (1){
   alert(" You are logged in");
+   window.location.href ='admin.html';
+  }
 }
+
+ function Venue(){
+   window.location.href ='venue.html'; 
+  }
 </script>
 </head>
 <body style="background-color:#1EB49F;">
-
-<form action="/action_page.php">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br>
+<div>
+ Admin Details:
+ <br></br>
+<form action="">
+  User name: <input type="text" name="user" id="user"><br>
+  Password: <input type="text" name="pass" id="pass"><br>
   <input type="button" onclick="Login()" value="Submit">
 </form>
+</div>
+<br></br>
+<div>
+ Vote and Comment:
+ <br></br>
+ <form action="">
+  <input type="button" onclick="Venue()" value="Vote and Comment">
+</form>
+</div>
 </body>
 </html>
 
