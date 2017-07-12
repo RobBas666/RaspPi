@@ -98,6 +98,11 @@
         -o-background-size: cover;
          background-size: cover;
  } 
+ td {
+    color: white;
+	text-align: center;
+    padding: 8px;
+ }
  </style>
 </head>
 <body>
@@ -108,26 +113,28 @@
   Place your vote for the best presenter in the venue
   </div>
    <div>
+ </font>  
     <form action="">
 	<div>
-     <input type="radio" name="vote" id = "r1" value="1"> Presenter 1<br>
-	 &#160 &#160 Comment <input type="text" id="Comment1" size="50">
-	 </div>
-	 <div>
-     <input type="radio" name="vote" id = "r2" value="2"> Presenter 2<br>
-	  &#160 &#160 Comment <input type="text" id="Comment2" size="50">
-	 </div>
-	 <div>
-     <input type="radio" name="vote" id = "r3" value="3"> Presenter 3<br>
-	  &#160 &#160 Comment <input type="text" id="Comment3" size="50">
+	 <table id = "vTable">
+	   <tr>
+	    <td> <input type="radio" name="vote" id = "r1" value="1"> Presenter 1 </td>
+		<td> <input type="radio" name="vote" id = "r2" value="2"> Presenter 2 </td>
+		<td>  <input type="radio" name="vote" id = "r3" value="3"> Presenter 3 </td>
+	   </tr>
+	   <tr>
+	    <td>  Comment <input type="text" id="Comment1" size="40"> </td>
+		<td>  Comment <input type="text" id="Comment2" size="40"> </td>
+		<td>  Comment <input type="text" id="Comment3" size="40"> </td>
+	   </tr>
+	 </table>
 	 </div>
    </form>
    </div>
   <div>  
   <input type="button" id = "post" onclick="post()" value="Post Comment">
-  </div>
-  <p></p>
   <input type="button" id = "vote" onclick="vote()" value="Vote">
+  </div>
   <p></p>
   <a class="twitter-timeline" href="https://twitter.com/RasbPi3">Tweets by RasbPi3</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  <script type="text/javascript">
