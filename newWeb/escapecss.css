@@ -48,8 +48,40 @@ p{
 .form{
   width:$full;
 }
+/*
+label, input, textarea{
+	display: block;	
+}
+input, textarea{
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+input:focus, textarea:focus{
+	border: solid 3px #77bde0;	
+}
 
-input[type="text"],input[type="password"], input[type="datetime-local"]{
+textarea{
+	height: 100px;	
+	resize: none; 
+	overflow: auto;
+}/**/
+
+input[type="text"],input[type="password"], input[type="datetime-local"], textarea{
   width:98%;
   padding:15px 0px 15px 8px;
   border-radius:5px;
