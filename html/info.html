@@ -43,14 +43,14 @@ date.value = '2017-06-01T08:30';
   <h1>Presenters Info</h1>
   <p>Please enter each presenter's info. Press submit after each person.</p>
   <form class="form" method="post" action="insertPresenter.php">
-    <input id="pName" name="name" type="text" class="password" placeholder="Presenter Name">
-	<input id="pHandle" name="handle" type="text" class="password" placeholder="Twitter Handle">
-	<input id="pTopic" name="topic" type="text" class="password" placeholder="Topic">
-	<input id="venue" name="venue" type="text" class="password" placeholder="Venue">
+    <input id="pName" name="name" type="text" class="password" placeholder="Presenter Name" required>
+	<input id="pHandle" name="handle" type="text" class="password" placeholder="Twitter Handle" required>
+	<input id="pTopic" name="topic" type="text" class="password" placeholder="Topic" required>
+	<input id="venue" name="venue" type="text" class="password" placeholder="Venue" required>
 	<label for="start">Start Time: </label>
-	<input id="startT" name="start" type="datetime-local" class="password" value="2017-07-12T08:30">
+	<input id="startT" name="start" type="datetime-local" class="password" value="2017-07-12T08:30" required>
 	<label for="end">End Time: </label>
-	<input id="endT" name="end" type="datetime-local" class="password" value="2017-07-12T08:30">
+	<input id="endT" name="end" type="datetime-local" class="password" value="2017-07-12T08:30" required>
     <!--<div>
       <p class="password-help">Please enter the password.</p>
     </div>-->
