@@ -103,12 +103,14 @@
 	text-align: center;
     padding: 8px;
  }
+
  </style>
 </head>
 <body>
 <font color = "white">
  <p></p>
   Twitter Handle: @ <input type="text" id="Hand" size="20">
+  <p></p>
   <div>
   Place your vote for the best presenter in the venue
   </div>
@@ -142,7 +144,8 @@
   </script>
   <script>
     var table = document.getElementById("vTable");
-	var row = table.insertRow(0);
+	var header = table.createTHead();
+	var row = header.insertRow(0);
 	var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
 	var cell3 = row.insertCell(2)
