@@ -1,13 +1,19 @@
 <?php
 	//$mins = $_REQUEST["interval"];
-         $consumerKey = 'f9iLv2YwAtAs7nlfkzldrjs31';
-        $consumerSecret = 'dbXvKs6oK5pkgVkJpz5K49JY2RwsbHu33KHtUava5M2adGbZ0e';
-        $accessToken = '884320356630228993-8xp43SZseryyphMhQloUmbVGCwscnJ1';
-        $accessTokenSecret = 'F0EKzvrwWMFfehl0jlippWcqdCRRFqDRQDfKw6VxmQK5D';
+	$Text=file('tokens.txt');
+	echo count($Text).'<br>';
 
-        $conn = new mysqli("127.0.0.1", "bbd", "password","Escape", 3306);
+	/*$consumerKey = $Text[0];
+	//$consumerKey= 'f9iLv2YwAtAs7nlfkzldrjs31';
+	$consumerSecret = $Text[1];
+	//$consumerSecret = 'dbXvKs6oK5pkgVkJpz5K49JY2RwsbHu33KHtUava5M2adGbZ0e';
+	$accessToken = $Text[2];
+	//$accessToken = "884320356630228993-8xp43SZseryyphMhQloUmbVGCwscnJ1";
+	$accessTokenSecret = $Text[3];
+	//$accessTokenSecret =  "F0EKzvrwWMFfehl0jlippWcqdCRRFqDRQDfKw6VxmQK5D";*/
+    $conn = new mysqli("127.0.0.1", "bbd", "password","escape", 3306);
 
-	while (true){
+	/*while (true){
 	for ($i = 1; $i <= 5; $i++){
         	//$sql = "SELECT COMMENTID, COMMENT, HANDLE FROM COMMENTS LEFT JOIN PRESENTER ON PRESENTER = PRESENTERID WHERE TWEETED = 0 AND TIME > (NOW() - interval 10 minute)  ORDER BY TIME DESC";
               $sql = "SELECT COMMENTID, COMMENT, HANDLE FROM COMMENTS LEFT JOIN PRESENTER ON PRESENTER = PRESENTERID WHERE TWEETED = 0 ORDER BY TIME DESC";
@@ -37,7 +43,7 @@
 		$cb->setTimeout(15000);
 
 		if (sizeof($output) == 0) {$stat = "$track #BBDEscape";}
-	        else {$stat = "$handle $track - $comment #BBDEscape";}
+	        else {$stat = " h $handle $track - $comment #BBDEscape";}
 
 		if ($i == 1){
 			echo shell_exec('sh /var/www/cgi-bin/camera.sh');
@@ -62,5 +68,5 @@
 		}
 	}
 	sleep(300);
-	}
+	}*/
 ?>
