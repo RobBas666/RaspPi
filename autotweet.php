@@ -1,30 +1,34 @@
 <?php
 	//$mins = $_REQUEST["interval"];
-
-	$consumerKey = $_REQUEST["consumerKey"];
-        $consumerSecret = $_REQUEST["consumerSecret"];
-        $accessToken = $_REQUEST["accessToken"];
-        $accessTokenSecret = $_REQUEST["accessTokenSecret"];
+         $consumerKey = 'f9iLv2YwAtAs7nlfkzldrjs31';
+        $consumerSecret = 'dbXvKs6oK5pkgVkJpz5K49JY2RwsbHu33KHtUava5M2adGbZ0e';
+        $accessToken = '884320356630228993-8xp43SZseryyphMhQloUmbVGCwscnJ1';
+        $accessTokenSecret = 'F0EKzvrwWMFfehl0jlippWcqdCRRFqDRQDfKw6VxmQK5D';
 
         $conn = new mysqli("127.0.0.1", "bbd", "password","Escape", 3306);
 
 	while (true){
 	for ($i = 1; $i <= 5; $i++){
-        	$sql = "SELECT COMMENTID, COMMENT, HANDLE FROM COMMENTS LEFT JOIN PRESENTER ON PRESENTER = PRESENTERID WHERE TWEETED = 0 AND TIME > (NOW() - interval 10 minute)  ORDER BY TIME DESC";
-
+        	//$sql = "SELECT COMMENTID, COMMENT, HANDLE FROM COMMENTS LEFT JOIN PRESENTER ON PRESENTER = PRESENTERID WHERE TWEETED = 0 AND TIME > (NOW() - interval 10 minute)  ORDER BY TIME DESC";
+              $sql = "SELECT COMMENTID, COMMENT, HANDLE FROM COMMENTS LEFT JOIN PRESENTER ON PRESENTER = PRESENTERID WHERE TWEETED = 0 ORDER BY TIME DESC";
         	$result = $conn->query($sql);
 	        $output = array();
        		while($row = $result->fetch_assoc()){
                 	$output[]=$row;
 	        }
+			//echo $output[0];
 	        $handle = $output[0]["HANDLE"];
-		$comment = $output[0]["COMMENT"];
-	echo sizeof($output);
+			echo $handle."<br/>";
+		    $comment = $output[0]["COMMENT"];
+			echo $comment;
+			
+	    echo sizeof($output) ."<br/>";
 		$myfile = fopen("name.txt", "r");
         	$track = fread($myfile, filesize("name.txt"));
+			echo $track;
 	        fclose($myfile);
 
-	        require_once('/var/www/html/scripts/codebird-php-develop/src/codebird.php');
+	        require_once('/codebird-php-develop/src/codebird.php');
 
         	 \Codebird\Codebird::setConsumerKey("$consumerKey", "$consumerSecret");
 	        $cb = \Codebird\Codebird::getInstance();

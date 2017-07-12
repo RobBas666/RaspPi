@@ -3,15 +3,18 @@
  <head>
   <script src='./jquery-3.2.1.min.js'></script>
    <!-- SCRIPTS START HERE -->
-   <script type="text/javascript">
+ <script type="text/javascript">
  var v = 0;
+ var cookie,timeslot,comment,rating;
+ cookie = 1;
+ timeslot = NULL;
  function twitterPost(){
    var com, handle,i=0;;
    handle = "@"+ document.getElementById("Hand").value;
    com = document.getElementById("Comment").value;
    if (com != ""&& com.length<141){
     alert(" Your comment has been posted.");
-	//Post to twitter
+	comment = comment;
 	}
   
   if (com.length >140){
@@ -37,12 +40,15 @@
     });
 	$("#r1").click(function(){
 	  v = 1;
+	  timeslot = 1;
 	});
 	$("#r2").click(function(){
 	  v = 2;
+	  timeslot = 2;
 	});
 	$("#r3").click(function(){
 	  v = 3;
+	  timeslot = 3;
 	});
    });
 </script>
@@ -94,10 +100,12 @@
 	   <!-- VOTING BUTTON -->
 	   <input id = "vote" type="button" class="button" onclick="presenterVote()" value="Vote"> <br><br>
 	   <!-- COMMENTING -->
+	   <form action = "newComment.php">
 	   <textarea id="Comment" type="text" class="password" name="message" placeholder="Enter your comment."></textarea>
 	   <!-- USER HANDLE -->
 	   <input id="Hand" type="handle" class="password" placeholder="Your Twitter Handle">
 	   <!-- COMMENTING BUTTON -->
+	   </form>
 	   <input id="post" type="button" class="button" onclick="twitterPost()" value="Post Comment"> <br> <br>
 	   <a align="center" class="twitter-timeline" href="https://twitter.com/RasbPi3">Tweets by RasbPi3</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  
@@ -107,19 +115,5 @@
 </div> 
 </div>
 <!-- INCLUDE TWITTER FEED -->
-<script type="text/javascript">
-    //function to check mac address call
-  </script>
-  <script>
-    var table = document.getElementById("vTable");
-	var header = table.createTHead();
-	var row = header.insertRow(0);
-	var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2)
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
-	cell3.innerHTML = "NEW CELL3";
-  </script>
  </body>
 </html>
