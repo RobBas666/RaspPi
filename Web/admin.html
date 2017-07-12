@@ -6,7 +6,7 @@
     var pass = document.getElementById("pass").value;
 	if (pass == "1234"){
      alert(" redirecting you to the information page ");
-	 window.location.href ='info.html';
+	 window.open('info.html', "_self");
 	 } else {
 	            alert("Wrong Password");
 				document.getElementById("pass").value ="";
