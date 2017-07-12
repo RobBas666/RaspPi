@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Programming aptitude evaluation</title>
+        <script type="text/javascript" src="src/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+    </head>
+
+    <body onload="init()">
+
+        <noscript>
+        <p>JavaScript is required to use this page.</p>
+        </noscript>
+
+        <div id="holder">
+            <div id="heading">
+                <h1 id="currentQuestion">Question One</h1>
+				<div id="credits">
+					Total Credits: 100
+				</div>
+        <div id="instructions">
+          <ul>
+						<li>Use the coloured squares at the top of the tool box to add a colour to the 'build' stack.</li>
+						<li>Use the 'repeat' function to place selected squares from the build stack ontop of the stack.</li>
+						<li>Use the 'switch' function to replace the selected colour on the bottom left of the tool box with the colour on the bottom right.</li>
+					</ul>
+        </div>
+        </div>
+
+            <div id="tools">
+                <div id="colourSelect">
+                    <h2 id="toolsHeading" class="subheading">Tools</h2>
+                    <div class="blockTool red" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool orange" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool yellow" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool green" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool blue" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool indigo" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool purple" onclick="addColor(this)">(2)</div>
+                    <div class="blockTool blank"></div>
+                </div>
+                <div>
+                <input type="button" value="Repeat (1)" class="toolButton" onclick="doRepeat()"></input>
+                <input type="button" value="Switch (1)" class="toolButton" onclick="doSwitch()"></input>
+                <input type="button" value="Reset" class="toolButton" onclick="resetQuestion()"/>
+              </div>
+            <div id="containerFrom" class="switchPick">
+                    <div class="blockPick red" onclick="fromColor(this)"></div>
+                    <div class="blockPick orange" onclick="fromColor(this)"></div>
+                    <div class="blockPick yellow" onclick="fromColor(this)"></div>
+                    <div class="blockPick green" onclick="fromColor(this)"></div>
+                    <div class="blockPick blue" onclick="fromColor(this)"></div>
+                    <div class="blockPick indigo" onclick="fromColor(this)"></div>
+                    <div class="blockPick purple" onclick="fromColor(this)"></div>
+                    <div class="blockPick blank"></div>
+                </div>
+                <div id="containerTo" class="switchPick">
+                    <div class="blockPick red" onclick="toColor(this)"></div>
+                    <div class="blockPick orange" onclick="toColor(this)"></div>
+                    <div class="blockPick yellow" onclick="toColor(this)"></div>
+                    <div class="blockPick green" onclick="toColor(this)"></div>
+                    <div class="blockPick blue" onclick="toColor(this)"></div>
+                    <div class="blockPick indigo" onclick="toColor(this)"></div>
+                    <div class="blockPick purple" onclick="toColor(this)"></div>
+                    <div class="blockPick blank"></div>
+                </div>
+            </div>
+
+            <div id="build">
+                <h2 id="buildHeading" class="subheading">Build</h2>
+                <div class="blockStack blank" id="B9" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B8" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B7" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B6" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B5" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B4" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B3" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B2" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B1" onclick="highlight(this)"></div>
+                <div class="blockStack blank" id="B0" onclick="highlight(this)"></div>
+            </div>
+
+            <div id="given">
+                <h2 id="givenHeading" class="subheading">Given</h2>
+                <div class="blockStack blank" id="G9"></div>
+                <div class="blockStack blank" id="G8"></div>
+                <div class="blockStack blank" id="G7"></div>
+                <div class="blockStack blank" id="G6"></div>
+                <div class="blockStack blank" id="G5"></div>
+                <div class="blockStack blank" id="G4"></div>
+                <div class="blockStack blank" id="G3"></div>
+                <div class="blockStack blank" id="G2"></div>
+                <div class="blockStack blank" id="G1"></div>
+                <div class="blockStack blank" id="G0"></div>
+            </div>
+        </div>
+
+
+        <div id="cover">
+            <div id="results"></div>
+        </div>
+
+    </body>
+</html>

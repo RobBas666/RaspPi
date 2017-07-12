@@ -1,0 +1,51 @@
+<html>
+    <link href='infocss.css' rel='stylesheet' type='text/css'>
+ <head>
+  <script src='./jquery-3.2.1.min.js'></script>
+  <script>
+   var pName, pTopic,pHandle,venue,startT,endT;
+   function Enter(){
+    pName= document.getElementById("pName").value;
+	pHandle = document.getElementById("pHandle").value;
+	pTopic = document.getElementById("pTopic").value;
+	venue = document.getElementById("venue").value;
+	startT = document.getElementById("startT").value;
+	endT = document.getElementById("endT").value;
+    alert("The information has been set.");
+   }
+   </script>
+   <!--<script>
+   var dateControl = document.querySelector('input[type="datetime-local"]');
+date.value = '2017-06-01T08:30';
+</script>-->
+  
+ <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
+ <title> BBD Escape Admin </title>
+<style>
+ body {
+        background-image: url("adminWall.jpg");
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+ } 
+ </style>
+  <div align="center">
+  <!--<div align="center">
+  <font size="16" color ="white">
+   Presenter
+  </font>
+  </div>-->
+ </head>
+ <body>
+ <div class="wrapper" align="center">
+  <img src="BBD-SoftwareDevelopment-White.png" style="width:250px;height:100px;">
+  <h1>Voting Info</h1>
+  <form class="form" method="post" action="insertPresenter.php">
+    
+  </form>
+  <img src="Escape-White.png" style="width:230px;height:100px;">
+</div> 
+</div>
+ </body>
+</html>
