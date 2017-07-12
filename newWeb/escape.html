@@ -2,63 +2,124 @@
     <link href='escapecss.css' rel='stylesheet' type='text/css'>
  <head>
   <script src='./jquery-3.2.1.min.js'></script>
-  <script>
-   var pName, pTopic,pHandle,venue,startT,endT;
-   function Enter(){
-    pName= document.getElementById("pName").value;
-	pHandle = document.getElementById("pHandle").value;
-	pTopic = document.getElementById("pTopic").value;
-	venue = document.getElementById("venue").value;
-	startT = document.getElementById("startT").value;
-	endT = document.getElementById("endT").value;
-    alert("The information has been set.");
-   }
-   </script>
-   <!--<script>
-   var dateControl = document.querySelector('input[type="datetime-local"]');
-date.value = '2017-06-01T08:30';
-</script>-->
+   <!-- SCRIPTS START HERE -->
+   <script type="text/javascript">
+ var v = 0;
+ function twitterPost(){
+   var com, handle,i=0;;
+   handle = "@"+ document.getElementById("Hand").value;
+   com = document.getElementById("Comment").value;
+   if (com != ""&& com.length<141){
+    alert(" Your comment has been posted.");
+	//Post to twitter
+	}
+  
+  if (com.length >140){
+	     alert("Some comments werent posted due to their length");
+         alert("Please ensure that comments are less than 140 characters long");
+       }
+ }
+ 
+ function presenterVote(){
+  if(v!=0){
+    alert("thank you for voting");
+   } else { alert("Please select a presenter");}
+ }
+ 
+  $(document).ready(function(){
+    $("#vote").click(function(){
+	  if(v!=0){
+        $("#r1").hide();
+		$("#r2").hide();
+		$("#r3").hide();
+		$("#vote").hide();
+	 }
+    });
+	$("#r1").click(function(){
+	  v = 1;
+	});
+	$("#r2").click(function(){
+	  v = 2;
+	});
+	$("#r3").click(function(){
+	  v = 3;
+	});
+   });
+</script>
+<!-- SCRIPTS END HERE -->
   
  <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
- <title> BBD Escape Admin </title>
+ <title> BBD Escape 2017 </title>
 <style>
  body {
-        background-image: url("adminWall.jpg");
+        background-image: url("imgMain.jpg");
 		-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
          background-size: cover;
  } 
+ td {
+    color: white;
+	text-align: center;
+    padding: 8px;
+ }
  </style>
+ 
+ <!-- TOP LOGOS -->
+ <div class="topnav" id="topnav" align = "center">
+  <img src="BBD-SoftwareDevelopment-White.png" style="width:220px;height:100px;" align = "left">
+    <font size="17" color="white">
+		*Venue*
+	</font>
+  <img src="Escape-White.png" style="width:220px;height:100px;" align = "right">
+  </div>
+  
   <div align="center">
-  <!--<div align="center">
-  <font size="16" color ="white">
-   Presenter
-  </font>
-  </div>-->
+  
  </head>
  <body>
  <div class="wrapper" align="center">
-  <h1>Presenters Info</h1>
-  <p>Please enter each presenter's info. Press submit after each person.</p>
+  <p>Please vote for your favourite presenter below: <p>
   <form class="form" method="post" action="">
-    <input id="pName" type="message" class="password" placeholder="Name">
-	<textarea id="message" type="text" class="password" name="message"></textarea>
-	<input id="pHandle" type="text" class="password" placeholder="Handle">
-	<input id="pTopic" type="text" class="password" placeholder="Topic">
-	<input id="venue" type="text" class="password" placeholder="Venue">
-	<p>Start Time: </p>
-	<input id="startT" type="datetime-local" class="password" value="2017-07-12T08:30">
-	<p>End Time: </p>
-	<input id="endT" type="datetime-local" class="password" value="2017-07-12T08:30">
-    <!--<div>
-      <p class="password-help">Please enter the password.</p>
-    </div>-->
-    <input type="submit" class="submit" onclick="Enter()" value="Submit">
+	<div>
+	 <!-- VOTING -->
+	 <div align="left">
+	    <input type="radio" name="vote" id = "r1" value="1"> <font face="helvetica" color="white">*Presenter1*;</font> <br>
+		<font face="helvetica" color="white">Topic: *Topic*</font><br><br>
+		<input type="radio" name="vote" id = "r2" value="2"> <font face="helvetica" color="white">*Presenter2*;</font> <br>
+		<font face="helvetica" color="white">Topic: *Topic*</font><br><br>
+		<input type="radio" name="vote" id = "r3" value="3"> <font face="helvetica" color="white">*Presenter3*;</font> <br>
+		<font face="helvetica" color="white">Topic: *Topic*</font><br><br>
+		</div>
+	   <!-- VOTING BUTTON -->
+	   <input id = "vote" type="button" class="button" onclick="presenterVote()" value="Vote"> <br><br>
+	   <!-- COMMENTING -->
+	   <textarea id="Comment" type="text" class="password" name="message" placeholder="Enter your comment."></textarea>
+	   <!-- USER HANDLE -->
+	   <input id="Hand" type="handle" class="password" placeholder="Your Twitter Handle">
+	   <!-- COMMENTING BUTTON -->
+	   <input id="post" type="button" class="button" onclick="twitterPost()" value="Post Comment"> <br> <br>
+	   <a align="center" class="twitter-timeline" href="https://twitter.com/RasbPi3">Tweets by RasbPi3</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ 
+	 </div>
+
   </form>
-  <img src="BBD-SoftwareDevelopment-White.png" style="width:250px;height:100px;">
-  <img src="Escape-White.png" style="width:230px;height:100px;">
 </div> 
 </div>
+<!-- INCLUDE TWITTER FEED -->
+<script type="text/javascript">
+    //function to check mac address call
+  </script>
+  <script>
+    var table = document.getElementById("vTable");
+	var header = table.createTHead();
+	var row = header.insertRow(0);
+	var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2)
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+	cell3.innerHTML = "NEW CELL3";
+  </script>
  </body>
 </html>

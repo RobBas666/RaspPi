@@ -2,11 +2,12 @@
     <link href='admincss.css' rel='stylesheet' type='text/css'>
  <head>
   <script src='./jquery-3.2.1.min.js'></script>
+  <script src='./adminjs.js'></script>
   <script>
    function Enter(){
     var pass = document.getElementById("pass").value;
 	if (pass == "1234"){
-     alert(" Redirecting you to the information page ");
+     <!--alert(" Redirecting you to the information page ");-->
 	 <!--window.location.href ='info.html';-->
 	 window.open('info.html', "_self");
 	 } else {
@@ -40,7 +41,7 @@
   <form class="form" method="post" action="">
     <input id="pass" type="password" class="password" placeholder="Password">
     <div>
-      <p class="password-help">Please enter the password.</p>
+      <p class="password-help">Please enter the password you were given.</p>
     </div>
     <input type="button" class="button" onclick="Enter()" value="Enter">
   </form>
