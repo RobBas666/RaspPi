@@ -1,0 +1,50 @@
+<html>
+    <link href='admincss.css' rel='stylesheet' type='text/css'>
+ <head>
+  <script src='./jquery-3.2.1.min.js'></script>
+  <script>
+   function Enter(){
+    var pass = document.getElementById("pass").value;
+	if (pass == "1234"){
+     alert(" Redirecting you to the information page ");
+	 <!--window.location.href ='info.html';-->
+	 window.open('info.html', "_self");
+	 } else {
+	            alert("Wrong Password");
+				document.getElementById("pass").value ="";
+	       }
+   }
+  </script>
+ <link rel="icon" href="BBD-SoftwareDevelopment-Black.png" type="image/x-icon"/>
+ <title> BBD Escape Admin </title>
+<style>
+ body {
+        background-image: url("adminWall.jpg");
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+ } 
+ </style>
+  <div align="center">
+  <div align="center">
+  <font size="16" color ="white">
+   Admin Login
+  </font>
+  </div>
+ </head>
+ <body>
+ <div class="wrapper" align="center">
+  <h1>Admin Check</h1>
+  <p>Please enter your administrator password below to access the presenter information.</p>
+  <form class="form" method="post" action="">
+    <input id="pass" type="password" class="password" placeholder="Password">
+    <div>
+      <p class="password-help">Please enter the password.</p>
+    </div>
+    <input type="submit" class="submit" onclick="Enter()" value="Enter">
+  </form>
+</div> 
+</div>
+ </body>
+</html>

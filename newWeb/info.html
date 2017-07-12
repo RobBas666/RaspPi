@@ -1,0 +1,55 @@
+<html>
+    <link href='infocss.css' rel='stylesheet' type='text/css'>
+ <head>
+  <script src='./jquery-3.2.1.min.js'></script>
+  <script>
+   var pName, pTopic,pHandle,venue,startT,endT;
+   function Enter(){
+    pName= document.getElementById("pName").value;
+	pHandle = document.getElementById("pHandle").value;
+	pTopic = document.getElementById("pTopic").value;
+	venue = document.getElementById("venue").value;
+	startT = document.getElementById("startT").value;
+	endT = document.getElementById("endT").value;
+    alert("The information has been set.");
+   }
+   </script>
+  
+ <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
+ <title> BBD Escape Admin </title>
+<style>
+ body {
+        background-image: url("adminWall.jpg");
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+ } 
+ </style>
+  <div align="center">
+  <div align="center">
+  <font size="16" color ="white">
+   Presenters Info
+  </font>
+  </div>
+ </head>
+ <body>
+ <div class="wrapper" align="center">
+  <h1>Presenter</h1>
+  <p>Please enter each presenter's info. Press submit after each person.</p>
+  <form class="form" method="post" action="">
+    <input id="pName" type="text" class="password" placeholder="Name">
+	<input id="pHandle" type="text" class="password" placeholder="Handle">
+	<input id="pTopic" type="text" class="password" placeholder="Topic">
+	<input id="venue" type="text" class="password" placeholder="Venue">
+	<input id="startT" type="text" class="password" placeholder="Start Time">
+	<input id="endT" type="text" class="password" placeholder="End Time">
+    <!--<div>
+      <p class="password-help">Please enter the password.</p>
+    </div>-->
+    <input type="submit" class="submit" onclick="Enter()" value="Submit">
+  </form>
+</div> 
+</div>
+ </body>
+</html>
