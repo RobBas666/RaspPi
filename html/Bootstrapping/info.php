@@ -52,29 +52,29 @@ date.value = '2017-06-01T08:30';
   <h1 style="font:52px Oswald; color:white; font-family:cambria;">Presenters Info</h1>
   <p>Please enter each presenter's info. Press submit after each person.</p>
   <form class="form" method="post" action="insertPresenter.php">
-    <input id="pName" type="text" class="name" placeholder="Name" required>
+    <input name="name" id="pName" type="text" class="name" placeholder="Name" required>
 	<div>
       <p class="name-help">Please enter the presenter's  name.</p>
     </div>
-	<input id="pHandle" type="text" class="handle" placeholder="Handle" required>
+	<input name="handle" id="pHandle" type="text" class="handle" placeholder="Handle" required>
 	<div>
       <p class="handle-help">Please enter the presenter's twitter handle. (Do not add the '@'.)</p>
     </div>
-	<input id="pTopic" type="text" class="topic" placeholder="Topic" required>
+	<input name="topic" id="pTopic" type="text" class="topic" placeholder="Topic" required>
 	<div>
       <p class="topic-help">Please enter the presenter's topic of speaking.</p>
     </div>
-	<input id="venue" type="text" class="venue" placeholder="Venue" required>
+	<input name="venue" id="venue" type="text" class="venue" placeholder="Venue" required>
 	<div>
       <p class="venue-help">Please enter the same venue name for the three presentors.</p>
     </div>
 	<label for="start">Start Time: </label>
-	<input id="startT" type="datetime-local" class="sTime" value="2017-07-13T08:30" required>
+	<input name="start" id="startT" type="datetime-local" class="sTime" value="2017-07-13T08:30" required>
 	<div>
       <p class="sTime-help">Enter the time at which the presenter starts speaking.</p>
     </div>
 	<label for="end">End Time: </label>
-	<input id="endT" type="datetime-local" class="eTime" value="2017-07-13T08:30" required>
+	<input name="end" id="endT" type="datetime-local" class="eTime" value="2017-07-13T08:30" required>
 	<div>
       <p class="eTime-help">Enter the time at which the presenter ends speaking.<p>
     </div>
