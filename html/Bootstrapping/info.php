@@ -49,32 +49,32 @@ date.value = '2017-06-01T08:30';
  <body>
  <div class="wrapper" align="center" type="main">
   <img src="pics/BBD-SoftwareDevelopment-White.png" style="width:250px;height:100px;">
-  <h1 style="color:white">Presenters Info</h1>
+  <h1 style="font:52px Oswald; color:white; font-family:cambria;">Presenters Info</h1>
   <p>Please enter each presenter's info. Press submit after each person.</p>
   <form class="form" method="post" action="insertPresenter.php">
-    <input id="pName" type="text" class="name" placeholder="Name">
+    <input id="pName" type="text" class="name" placeholder="Name" required>
 	<div>
       <p class="name-help">Please enter the presenter's  name.</p>
     </div>
-	<input id="pHandle" type="text" class="handle" placeholder="Handle">
+	<input id="pHandle" type="text" class="handle" placeholder="Handle" required>
 	<div>
       <p class="handle-help">Please enter the presenter's twitter handle. (Do not add the '@'.)</p>
     </div>
-	<input id="pTopic" type="text" class="topic" placeholder="Topic">
+	<input id="pTopic" type="text" class="topic" placeholder="Topic" required>
 	<div>
       <p class="topic-help">Please enter the presenter's topic of speaking.</p>
     </div>
-	<input id="venue" type="text" class="venue" placeholder="Venue">
+	<input id="venue" type="text" class="venue" placeholder="Venue" required>
 	<div>
       <p class="venue-help">Please enter the same venue name for the three presentors.</p>
     </div>
 	<label for="start">Start Time: </label>
-	<input id="startT" type="datetime-local" class="sTime" value="2017-07-13T08:30">
+	<input id="startT" type="datetime-local" class="sTime" value="2017-07-13T08:30" required>
 	<div>
       <p class="sTime-help">Enter the time at which the presenter starts speaking.</p>
     </div>
 	<label for="end">End Time: </label>
-	<input id="endT" type="datetime-local" class="eTime" value="2017-07-13T08:30">
+	<input id="endT" type="datetime-local" class="eTime" value="2017-07-13T08:30" required>
 	<div>
       <p class="eTime-help">Enter the time at which the presenter ends speaking.<p>
     </div>
@@ -86,7 +86,7 @@ date.value = '2017-06-01T08:30';
     <br><br>
     <div class="panel panel-default"  type="table">
     <!-- Default panel contents -->
-    <div class="panel-heading" style="font:52px Oswald; color:#28D2DE; background:rgba(0,0,0,0.2);">Presenters</div>
+    <div class="panel-heading" style="font:52px Oswald; color:#28D2DE; background:rgba(0,0,0,0.2); font-family:Cambria;">Presenters</div>
 
     <!-- Table -->
     <table class="table">
