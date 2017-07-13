@@ -17,6 +17,7 @@
 	   function vote(){
        if(v!=0){
        alert("thank you for voting");
+	   var voted = 1;
 	    document.cookie = "voted="+ voted+";expires=Thu, 13 Jul 2017 10:40:00 UTC;";
        } else { alert("Please select a presenter");}
       }
