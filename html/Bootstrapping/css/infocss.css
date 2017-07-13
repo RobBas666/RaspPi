@@ -1,4 +1,4 @@
-<script type="text/javascript" src="adminjs.js"></script>
+<script src='css/infojs.js'></script>
 /*dark background to support form theme*/
 body{
   background:url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png);
@@ -28,6 +28,10 @@ $align:center;
   margin:$auto;
 }
 
+img {
+	display:block;
+}
+
 h1{
   text-align:$align;
   padding:30px 0px 0px 0px;
@@ -50,6 +54,32 @@ label{
   color:#6E6E6E;
   text-shadow:#000 0px 1px 5px;
   margin-bottom:30px;
+}
+
+tr{
+	 width:98%;
+  padding:15px 0px 15px 8px;
+  border-radius:5px;
+  box-shadow:inset 4px 6px 10px -4px rgba( 241, 148, 138 ,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	background:rgba(0,0,0,0.2);
+  @include disable;
+  border:1px solid rgba(0,0,0,1);
+  margin-bottom:10px;
+  color: #5bbbb2;
+  text-shadow:#000 0px 1px 5px;
+}
+
+div[type="table"]{
+	width:98%;
+  padding:15px 0px 15px 8px;
+  border-radius:5px;
+  box-shadow:inset 4px 6px 10px -4px rgba( 241, 148, 138 ,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	background:rgba(0,0,0,0.2);
+  @include disable;
+  border:1px solid rgba(0,0,0,1);
+  margin-bottom:10px;
+  color:#d0d3d4;
+  text-shadow:#000 0px 1px 5px;
 }
 
 .form{
@@ -103,7 +133,37 @@ input[type="submit"]:hover{
   cursor:pointer;
 }
 
-.password-help{
+.name-help{
+  display:none;
+  padding:0px;
+  margin:0px 0px 15px 0px;
+}
+
+.handle-help{
+  display:none;
+  padding:0px;
+  margin:0px 0px 15px 0px;
+}
+
+.topic-help{
+  display:none;
+  padding:0px;
+  margin:0px 0px 15px 0px;
+}
+
+.venue-help{
+  display:none;
+  padding:0px;
+  margin:0px 0px 15px 0px;
+}
+
+.sTime-help{
+  display:none;
+  padding:0px;
+  margin:0px 0px 15px 0px;
+}
+
+.eTime-help{
   display:none;
   padding:0px;
   margin:0px 0px 15px 0px;

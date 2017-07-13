@@ -3,7 +3,8 @@
  <head>
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <script src="js/bootstrap.js"></script>
-  <script src='./jquery-3.2.1.min.js'></script>
+  <script src='css/jquery-3.2.1.min.js'></script>
+  <script src='css/infojs.js'></script>
   <script>
    var pName, pTopic,pHandle,venue,startT,endT;
    function Enter(){
@@ -31,6 +32,13 @@ date.value = '2017-06-01T08:30';
         -o-background-size: cover;
          background-size: cover;
  } 
+
+ div [type="main"]{
+  position: relative;
+  width: auto;
+  min-width: 80%;
+}
+
  </style>
   <div align="center">
   <!--<div align="center">
@@ -40,28 +48,46 @@ date.value = '2017-06-01T08:30';
   </div>-->
  </head>
  <body>
- <div class="wrapper" align="center">
+ <div class="wrapper" align="center" type="main">
   <img src="pics/BBD-SoftwareDevelopment-White.png" style="width:250px;height:100px;">
-  <h1>Presenters Info</h1>
+  <h1 style="color:white">Presenters Info</h1>
   <p>Please enter each presenter's info. Press submit after each person.</p>
   <form class="form" method="post" action="insertPresenter.php">
-    <input id="pName" name="name" type="text" class="password" placeholder="Presenter Name" required>
-	<input id="pHandle" name="handle" type="text" class="password" placeholder="Twitter Handle" required>
-	<input id="pTopic" name="topic" type="text" class="password" placeholder="Topic" required>
-	<input id="venue" name="venue" type="text" class="password" placeholder="Venue" required>
+    <input id="pName" type="text" class="name" placeholder="Name">
+	<div>
+      <p class="name-help">Please enter the presenter's  name.</p>
+    </div>
+	<input id="pHandle" type="text" class="handle" placeholder="Handle">
+	<div>
+      <p class="handle-help">Please enter the presenter's twitter handle. (Do not add the '@'.)</p>
+    </div>
+	<input id="pTopic" type="text" class="topic" placeholder="Topic">
+	<div>
+      <p class="topic-help">Please enter the presenter's topic of speaking.</p>
+    </div>
+	<input id="venue" type="text" class="venue" placeholder="Venue">
+	<div>
+      <p class="venue-help">Please enter the same venue name for the three presentors.</p>
+    </div>
 	<label for="start">Start Time: </label>
-	<input id="startT" name="start" type="datetime-local" class="password" value="2017-07-12T08:30" required>
+	<input id="startT" type="datetime-local" class="sTime" value="2017-07-13T08:30">
+	<div>
+      <p class="sTime-help">Enter the time at which the presenter starts speaking.</p>
+    </div>
 	<label for="end">End Time: </label>
-	<input id="endT" name="end" type="datetime-local" class="password" value="2017-07-12T08:30" required>
+	<input id="endT" type="datetime-local" class="eTime" value="2017-07-13T08:30">
+	<div>
+      <p class="eTime-help">Enter the time at which the presenter ends speaking.<p>
+    </div>
     <!--<div>
       <p class="password-help">Please enter the password.</p>
     </div>-->
     <input type="submit" class="submit" onclick="Enter()" value="Submit">
-    
+    </div>
     <br><br>
-    <div class="panel panel-default">
+    <div class="panel panel-default"  type="table">
     <!-- Default panel contents -->
-    <div class="panel-heading">Presenters</div>
+    <div class="panel-heading" style="font:26px Oswald; color:#28D2DE; background:rgba(0,0,0,0.2);">Presenters</div>
 
     <!-- Table -->
     <table class="table">
@@ -90,7 +116,7 @@ date.value = '2017-06-01T08:30';
   </table>
   <br>
 </div>
-    
+   <div type="main">
   </form>
   <img src="pics/Escape-White.png" style="width:230px;height:100px;">
 </div> 
