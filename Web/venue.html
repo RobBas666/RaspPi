@@ -34,9 +34,21 @@
        }
  }
  
+  window.onload = function (){
+        if (document.cookie.length != 0){
+                $("#r1").hide();
+				$("#r2").hide();
+				$("#r3").hide();
+				$("#vote").hide();
+			}
+        }
+
+ 
  function vote(){
   if(v!=0){
     alert("thank you for voting");
+	var voted = 1;
+	document.cookie = "voted="+ voted+";expires=Thu, 13 Jul 2017 10:30:00 UTC;";
    } else { alert("Please select a presenter");}
  }
  
@@ -59,8 +71,6 @@
 	  v = 3;
 	});
    });
- /* check mac address function code
- }*/
 </script>
 <link rel="icon" href="BBD-SoftwareDevelopment-Black.png">
 <title> BBD Escape Voting </title>
