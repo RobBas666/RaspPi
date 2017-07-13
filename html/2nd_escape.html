@@ -4,45 +4,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 	<script src='./jquery-3.2.1.min.js'></script>
     <script src="js/bootstrap.js"></script>
-	<script>
-	   var v;
-	   window.onload = function (){
-       if (document.cookie.length != 0){
-                $("#1").hide();
-				$("#2").hide();
-				$("#3").hide();
-				$("#vote").hide();
-			}
-        }
-	   
-	   function vote(){
-       if(v!=0){
-       alert("thank you for voting");
-	   var voted = 1;
-	    document.cookie = "voted="+ voted+";expires=Thu, 13 Jul 2017 10:40:00 UTC;";
-       } else { alert("Please select a presenter");}
-      }
-	  
-	  $(document).ready(function(){
-      $("#vote").click(function(){
-	     if(v!=0){
-           $("#1").hide();
-		   $("#2").hide();
-		   $("#3").hide();
-		   $("#vote").hide();
-	    }
-        });
-	     $("#1").click(function(){
-	      v = 1;
-	    });
-	    $("#2").click(function(){
-	      v = 2;
-      	});
-     	$("#3").click(function(){
-	      v = 3;
-	    });
-        });
-   </script> 
+	
     <style>
         body {
             background-image: url("imgMain.jpg");
@@ -52,7 +14,12 @@
             background-size: cover;
         }
     </style>    
-    <?php        
+    <?php 
+	
+	if (isset($_COOKIE['voted']){}
+    function vote(){
+	  setCookie("voted","true",time()+86400);
+	}	
 	function getMac(){
 		$ip = $_SERVER['REMOTE_ADDR'];
 		$mac = false;			
