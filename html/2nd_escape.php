@@ -3,6 +3,44 @@
 <head runat="server">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/bootstrap.js"></script>
+	<script>
+	   var v;
+	   window.onload = function (){
+       if (document.cookie.length != 0){
+                $("#r1").hide();
+				$("#r2").hide();
+				$("#r3").hide();
+				$("#vote").hide();
+			}
+        }
+	   
+	   function vote(){
+       if(v!=0){
+       alert("thank you for voting");
+	    document.cookie = "voted="+ voted+";expires=Thu, 13 Jul 2017 10:40:00 UTC;";
+       } else { alert("Please select a presenter");}
+      }
+	  
+	  $(document).ready(function(){
+      $("#vote").click(function(){
+	     if(v!=0){
+           $("#r1").hide();
+		   $("#r2").hide();
+		   $("#r3").hide();
+		   $("#vote").hide();
+	    }
+        });
+	     $("#r1").click(function(){
+	      v = 1;
+	    });
+	    $("#r2").click(function(){
+	      v = 2;
+      	});
+     	$("#r3").click(function(){
+	      v = 3;
+	    });
+        });
+   </script> 
     <style>
         body {
             background-image: url("imgMain.jpg");
@@ -79,7 +117,7 @@
 		</div>
 		<div class="form-group">
 			<label for="vote"></label>
-			<button id="vote" type="button" class="btn btn-primary btn-block"> Comment </button>
+			<button id="vote" type="button" class="btn btn-primary btn-block" onclick="vote()"> Comment </button>
 		</div>
     </form>
 </body>
