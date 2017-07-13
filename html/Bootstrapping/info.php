@@ -1,10 +1,9 @@
 <html>
     <link href='css/infocss.css' rel='stylesheet' type='text/css'>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
  <head>
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <script src="js/bootstrap.js"></script>
-  <script src='css/jquery-3.2.1.min.js'></script>
-  <script src='css/infojs.js'></script>
+  
   <script>
    var pName, pTopic,pHandle,venue,startT,endT;
    function Enter(){
@@ -87,7 +86,7 @@ date.value = '2017-06-01T08:30';
     <br><br>
     <div class="panel panel-default"  type="table">
     <!-- Default panel contents -->
-    <div class="panel-heading" style="font:26px Oswald; color:#28D2DE; background:rgba(0,0,0,0.2);">Presenters</div>
+    <div class="panel-heading" style="font:52px Oswald; color:#28D2DE; background:rgba(0,0,0,0.2);">Presenters</div>
 
     <!-- Table -->
     <table class="table">
@@ -121,5 +120,8 @@ date.value = '2017-06-01T08:30';
   <img src="pics/Escape-White.png" style="width:230px;height:100px;">
 </div> 
 </div>
+<script src="js/bootstrap.js"></script>
+  <script src='css/jquery-3.2.1.min.js'></script>
+  <script src='css/infojs.js'></script>
  </body>
 </html>
