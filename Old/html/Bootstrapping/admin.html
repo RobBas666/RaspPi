@@ -1,0 +1,62 @@
+<html>
+    <link href='css/admincss.css' rel='stylesheet' type='text/css'>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+ <head>
+  <script src='css/jquery-3.2.1.min.js'></script>
+  <script src='css/adminjs.js'></script>
+  <script>
+   function Enter(){
+    var pass = document.getElementById("pass").value;
+	if (pass == "1234"){
+     <!--alert(" Redirecting you to the information page ");-->
+	 <!--window.location.href ='info.html';-->
+	 window.open('info.php', "_self");
+	 } else {
+	            alert("Wrong Password");
+				document.getElementById("pass").value ="";
+	       }
+   }
+  </script>
+ <link rel="icon" href="pics/BBD-SoftwareDevelopment-Black.png" type="image/x-icon"/>
+ <title> BBD Escape Admin </title>
+<style>
+ body {
+        background-image: url("pics/adminWall.jpg");
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+ } 
+ 
+  div {
+  position: relative;
+  width: auto;
+  min-width: 80%;
+}
+
+ </style>
+  <div align="center">
+  <!--<div align="center">
+  <font size="16" color ="white">
+   Admin Login
+  </font>
+  </div>-->
+ </head>
+ <body>
+ <div class="wrapper" align="center">
+ <img src="pics/BBD-SoftwareDevelopment-White.png" style="width:250px;height:100px;">
+  <h1>Admin Check</h1>
+  <p>Please enter your administrator password below to access the presenter information.</p>
+  <form class="form" method="post" action="">
+    <input id="pass" type="password" class="password" placeholder="Password">
+    <div>
+      <p class="password-help">Please enter the password you were given.</p>
+    </div>
+    <input type="button" class="button" onclick="Enter()" value="Enter">
+  </form>
+  
+  <img src="pics/Escape-White.png" style="width:230px;height:100px;">
+</div> 
+</div>
+ </body>
+</html>

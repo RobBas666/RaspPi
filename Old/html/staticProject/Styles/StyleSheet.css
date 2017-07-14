@@ -1,0 +1,50 @@
+﻿body {
+    background-color:#737373;
+}
+#container {
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    width:90%;
+    border-radius:8px;
+    position:relative;
+}
+
+header {
+    text-align: center;
+    padding: 5px;
+    background-image: url('../images/bbd-logo.png');
+    background-repeat:no-repeat;
+    background-size:150px 65px;
+    padding-top:35px;
+    border-top-left-radius:8px;
+}
+h3{
+    padding:5px;
+    margin:5px;
+}
+
+article {
+    float:left;
+}
+
+article, aside, nav, footer {
+    padding: 5px;
+}
+
+aside {
+    background-color:white;
+    height:100%;
+}
+
+nav, footer {
+    height:40px;
+    background-color:#c9302c;
+    clear:both;
+	text-align:center;
+	padding:10px;
+}
+footer {
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+}
